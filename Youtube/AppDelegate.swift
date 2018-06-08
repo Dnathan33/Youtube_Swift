@@ -1,4 +1,4 @@
-//
+ //
 //  AppDelegate.swift
 //  Youtube
 //
@@ -16,7 +16,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.makeKeyAndVisible()
+        
+        let layout = UICollectionViewFlowLayout()
+        window?.rootViewController = UINavigationController(rootViewController: HomeController(collectionViewLayout: layout))
+        
+        UINavigationBar.appearance().barTintColor = UIColor.rgb(red: 230, green: 32, blue: 31)
+        
+        //Get rids of black bar underneath navbar
+        UINavigationBar.appearance().shadowImage = UIImage()
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+        
+        application.statusBarStyle = .lightContent
+        
+        let statusbarBackgroundView = UIView()
+        statusbarBackgroundView.backgroundColor = UIColor.rgb(red: 194, green: 31, blue: 31)
+        
+        window?.addSubview(statusbarBackgroundView)
+        window?.addConstraintWithFormat(format: "H:|[v0]|", views: statusbarBackgroundView)
+        window?.addConstraintWithFormat(format: "V:|[v0(20)]|", views: statusbarBackgroundView)
+        
+        
         return true
     }
 
@@ -90,4 +112,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 }
+ 
 
