@@ -1,0 +1,28 @@
+// from HomeController ep12
+   override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return videos?.count ?? 0
+        }
+
+   override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! VideoCell
+
+       cell.video = videos?[indexPath.item]
+        return cell
+    }
+
+  //using class HomeController: UICollectionViewDelegateFlowLayout
+   // this makes the cells a height of 200 and width to fill the frame
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        // finds the exact height given the width (subtructed by 16 on left and right) / by ration 16:9
+        let height = (view.frame.width - 16 - 16) * 9 / 16
+       return CGSize(width: view.frame.width, height: height + 16 + 88) //add 16px to the top plus add all of spacing on *vertical constraint
+   }
+
+    //eliminates the action spacing between the cells vertically
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+
+   }
+
+changing title is on EP 13
+
