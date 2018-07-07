@@ -21,7 +21,7 @@ class VideoPlayerView: UIView {
     lazy var pausePlayButton: UIButton = {
         let button = UIButton(type: .system)
         let image = UIImage(named: "pause")
-        button.setImage(image, for: [])
+        button.setImage(image, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.tintColor = UIColor.white
         button.isHidden = true
@@ -80,15 +80,15 @@ class VideoPlayerView: UIView {
     private func setupPlayerView() {
         let urlString = "https://firebasestorage.googleapis.com/v0/b/gameofchats-762ca.appspot.com/o/message_movies%2F12323439-9729-4941-BA07-2BAE970967C7.mov?alt=media&token=3e37a093-3bc8-410f-84d3-38332af9c726"
         if let url = NSURL(string: urlString) {
-            let player = AVPlayer(url: url as URL)
+            player = AVPlayer(url: url as URL)
             
             let playerLayer = AVPlayerLayer(player: player)
             self.layer.addSublayer(playerLayer)
             playerLayer.frame = self.frame
             
 
-            player.play()
-            player.addObserver(self, forKeyPath: "currentItem.loadedTimeRanges", options: .new, context: nil)
+            player?.play()
+            player?.addObserver(self, forKeyPath: "currentItem.loadedTimeRanges", options: .new, context: nil)
         }
     }
    
@@ -97,7 +97,6 @@ class VideoPlayerView: UIView {
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         //the player is ready and rendering frames
-        
         if keyPath == "currentItem.loadedTimeRanges"  {
             activityIndicatorView.stopAnimating()
             controlsContainerView.backgroundColor = UIColor.clear
