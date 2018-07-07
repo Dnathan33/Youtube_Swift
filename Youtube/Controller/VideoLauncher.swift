@@ -21,7 +21,7 @@ class VideoPlayerView: UIView {
     lazy var pausePlayButton: UIButton = {
         let button = UIButton(type: .system)
         let image = UIImage(named: "pause")
-        button.setImage(image, for: .normal)
+        button.setImage(image, for: [])
         button.translatesAutoresizingMaskIntoConstraints = false
         button.tintColor = UIColor.white
         button.isHidden = true
