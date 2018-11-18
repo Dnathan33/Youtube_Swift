@@ -16,7 +16,3 @@ Parsing JSON.
 Playing a video with Animations.
 
 REST integration via NSURLsession .
-
-Creating Cells for User Interface
-
-
