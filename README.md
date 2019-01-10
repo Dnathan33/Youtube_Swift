@@ -1,7 +1,7 @@
 # Youtube_Swift
 Youtube app clone.
 
-This project is me learning how to make applications using swift and objective-c by cloning the youtube app.
+This project is me learning how to make applications using swift by cloning the youtube app.
 
 This project focuses on the esstentials of prgramming with swift: Such as AutoLayout, UICollectionView, AVFoundation, Async, UIKit.
 
