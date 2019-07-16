@@ -1,9 +1,7 @@
 # Youtube_Swift
-Youtube app clone.
+Youtube clone.
 
-This project is me learning how to make applications using swift by cloning the youtube app.
-
-This project focuses on the esstentials of prgramming with swift: Such as AutoLayout, UICollectionView, AVFoundation, Async, UIKit.
+This project focuses on the esstentials of prgramming with swift: Such as AutoLayout, UICollectionView, UTableView, AVFoundation, Async, UIKit.
 
 Created and designed cells for user interface and used AutoLayout to put them in position. 
 
@@ -13,6 +11,5 @@ Fething Mutiple Feeds.
 
 Parsing JSON.
 
-Playing a video with Animations.
+Playing video with Animations.
 
-REST integration via NSURLsession .
