@@ -5,11 +5,8 @@ MVC-N Architecture
 
 This project focuses on the esstentials of prgramming with swift: Such as UIKit, UICollectionView, UTableView, AVFoundation, Async, and AutoLayout.
 
-API Calls
-
-Fetching Mutiple Feeds.
-
-Parsing JSON.
-
-Playing video with Animations.
+API Calls\n
+Fetching Mutiple Feeds.\n
+Parsing JSON.\n
+Playing video with Animations.\n
 
