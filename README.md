@@ -1,15 +1,11 @@
-# Youtube_Swift
+# Youtube
 Youtube clone.
+MVC-N Architecture
 
-This project focuses on the esstentials of prgramming with swift: Such as AutoLayout, UICollectionView, UTableView, AVFoundation, Async, UIKit.
+This project focuses on the esstentials of prgramming with swift: Such as UIKit, UICollectionView, UTableView, AVFoundation, Async, and AutoLayout.
 
-Created and designed cells for user interface and used AutoLayout to put them in position. 
-
-Utilized Emmurations to prevent bugs.
-
-Fething Mutiple Feeds.
-
+API Calls
+Fetching Mutiple Feeds.
 Parsing JSON.
-
 Playing video with Animations.
 
